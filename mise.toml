@@ -1,0 +1,42 @@
+min_version = "2026.6.10"
+
+[tools]
+node = "26.10.0"
+pnpm = "12.6.0"
+
+[tasks.setup]
+description = "Install workspace dependencies, build whisper.cpp and download the models"
+run = ["pnpm install --frozen-lockfile", "scripts/setup-engine.sh"]
+
+[tasks.dev]
+description = "Start the service and the test page with hot reload for the page (loopback only; restart for service changes, the model reloads)"
+run = "pnpm dev"
+
+[tasks.build]
+description = "Build every package and application"
+run = "pnpm -r build"
+
+[tasks.start]
+description = "Run Kobzar: the service, the engine and the built test page"
+depends = ["build"]
+run = "pnpm --filter @kobzar/service start"
+
+[tasks.typecheck]
+description = "Type-check every package"
+run = "pnpm typecheck"
+
+[tasks.test]
+description = "Run all tests once"
+run = "pnpm test"
+
+[tasks.lint]
+description = "Lint the workspace"
+run = "pnpm lint"
+
+[tasks.format]
+description = "Format the workspace with Prettier"
+run = "pnpm format"
+
+[tasks.check]
+description = "Typecheck, lint, format check and tests: what must pass before a commit"
+run = ["pnpm typecheck", "pnpm lint", "pnpm format:check", "pnpm test"]

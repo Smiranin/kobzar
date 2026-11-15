@@ -1,0 +1,12 @@
+# Phrases Whisper is known to invent on silence or noise. A segment that is exactly one of these
+# (ignoring case and punctuation) is removed from the Transcript; real speech containing these
+# words inside a longer segment is never touched. One phrase per line; # starts a comment.
+
+# Seen in Stage 0 (2026-11-14), large-v3-turbo on silence with VAD off
+Продолжение следует...
+
+# Widely reported subtitle credits from the Russian training data
+Субтитры сделал DimaTorzok
+Субтитры создавал DimaTorzok
+Редактор субтитров А.Синецкая Корректор А.Егорова
+Спасибо за просмотр!

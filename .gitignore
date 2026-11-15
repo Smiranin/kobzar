@@ -1,0 +1,18 @@
+# Private, never committed (public repository)
+kobzar.yaml
+dictionary.txt
+samples/
+mic/
+
+# Local engine build and model files
+vendor/
+models/
+
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+.env
+.env.*
+.DS_Store
+.vite/

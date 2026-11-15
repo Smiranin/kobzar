@@ -1,0 +1,7 @@
+{
+  "extends": "../../tsconfig.base.json",
+  // No Node types: core is also bundled into the test page. URL and AbortSignal come from the
+  // DOM lib, where Node and the browser agree.
+  "compilerOptions": { "noEmit": true, "types": [], "lib": ["ES2023", "DOM"] },
+  "include": ["src", "test"]
+}

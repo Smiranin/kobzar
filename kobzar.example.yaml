@@ -1,0 +1,27 @@
+# Copy to kobzar.yaml (ignored by git) and change what you need. Every key is optional;
+# a missing kobzar.yaml means these defaults.
+
+# Loopback only: 127.0.0.1 or localhost (adr/0001). The phone reaches Kobzar through
+# `tailscale serve`; any other value is refused at startup.
+host: 127.0.0.1
+port: 4900
+
+# The HTTPS address of Kobzar in the tailnet, e.g. https://my-mac.tail1234.ts.net:8443
+# (an origin: no path, no trailing slash).
+# Requests to that address and from it are allowed.
+publicUrl: ''
+
+# Other sites that may send Recordings from a browser, e.g. the Dojo's tailnet address,
+# written as origins like publicUrl.
+allowedOrigins: []
+
+defaultLanguage: ru
+
+# models/ggml-<model>.bin; large-v3-turbo or large-v3 (both downloaded by `mise run setup`).
+model: large-v3-turbo
+
+# whisper-server, loopback only.
+enginePort: 4901
+
+dictionaryPath: ./dictionary.txt
+samplesDir: ./samples

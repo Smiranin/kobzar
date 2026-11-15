@@ -1,0 +1,17 @@
+{
+  "name": "@kobzar/test-page",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@kobzar/core": "workspace:*",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "vite": "^8.3.5"
+  }
+}

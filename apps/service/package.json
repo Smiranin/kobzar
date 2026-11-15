@@ -1,0 +1,24 @@
+{
+  "name": "@kobzar/service",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "KOBZAR_DEV_ORIGIN=http://localhost:5173 tsx src/main.ts",
+    "start": "tsx src/main.ts",
+    "typecheck": "tsc",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.4.3",
+    "@fastify/multipart": "^10.1.8",
+    "@fastify/static": "^10.1.11",
+    "@kobzar/core": "workspace:*",
+    "fastify": "^5.12.8",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.15"
+  }
+}

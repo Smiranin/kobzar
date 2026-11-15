@@ -1,0 +1,11 @@
+# The Dictionary: words Kobzar must spell correctly. Copy to dictionary.txt (ignored by git).
+# One entry per line; blank lines and lines starting with # are skipped.
+# Only the first entries that fit the model prompt (about 400 characters) are used,
+# so keep the most important words at the top. A change applies to the next Recording.
+TypeScript
+Fastify
+Vitest
+Kubernetes
+useEffect
+workaround
+деплой
